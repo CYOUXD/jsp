@@ -24,10 +24,19 @@ if(id.equals(pw)) {
 	response.sendRedirect("session_welcome.jsp");
 }else {
 	//로그인 실패
-	response.sendRedirect("session_login.jsp");
+	//response.sendRedirect("session_login.jsp");
 	
 	//자바스크립트로 구현
-	
+%>
+	<script>
+		check(); // 함수 호출. 자바스크립트는 선언되어 있으면 앞뒤 어디든 상관이 없이 사용 가능
+		
+		function check() {
+			alert("로그인에 실패했습니다.");
+			history.go(-1); //뒤로가기 (history객체는 브라우저에 있는 접속 페이지를 나타냄)
+		}
+	</script>
+<%
 }
 %>
 <!DOCTYPE html>
