@@ -28,7 +28,7 @@
 			<h4>예약할 좌석을 선택하세요</h4>
 			<hr>
 			<h4>좌석 배치도</h4>
-			<form action="reserve_ok.jsp">
+			<form action="reserve_ok.jsp" name="form">
 				<%
 				for(char a='A';a<='Z';a++) {
 					%>
@@ -48,11 +48,11 @@
 						<%
 						if(list.contains(j+"-"+i)) {//예약 내역이 있을 때 
 						%>
-							<input type="checkbox" name="seats" value="<%=j %>-<%=i %>" disabled="disabled">
+							<input type="checkbox" name="seats" value="<%=j %>-<%=i %>" checked="checked" disabled="disabled" onclick='getCheckboxValue(event)'>
 						<%
 						}else { //예약 내역이 없을 때
 						%>					
-							<input type="checkbox" name="seats" value="<%=j %>-<%=i %>">
+							<input type="checkbox" name="seats" value="<%=j %>-<%=i %>" onclick='getCheckboxValue(event)'>
 						<%
 						}
 					}
@@ -67,9 +67,27 @@
 				}
 				%>
 				<br>
-				<input type="submit" value="예약">
+				<input type="button" value="예약" id="btn" onClick='btnClick()'>
 				<input type="reset" value="취소">
 			</form>
 		</div>
+		<script>			
+			let btn = document.getElementById("btn");
+			function getCheckboxValue(event)  {
+			  if(event.target.checked)  {
+			    btn.setAttribute("type", "submit");
+			  }else {				
+			    return false;
+			  }
+			}
+			function btnClick() {
+				let dv = event.currentTarget;
+				if(dv.getAttribute("type") == "button") {
+					alert("좌석을 선택하세요");
+				}else {
+					return false;
+				}
+			}
+		</script>
 	</body>
 </html>

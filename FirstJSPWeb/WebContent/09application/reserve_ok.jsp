@@ -15,6 +15,14 @@
     
     //3. reserve.jsp에서 넘어온 값을 확인
     String[] arr = request.getParameterValues("seats");
+    /*
+    if(request.getParameter("seats") != null){
+	    arr = request.getParameterValues("seats");
+    }else {
+    	//response.sendRedirect("reserve.jsp"); 
+    	//리다이렉트가 실행되도 JSP코드는 끝까지 실행되기 때문에 에러가 발생한다.
+    }
+    */
     
     //4. 3번에서 넘어온 값을 list에 포함되어 있는지 확인 
     //		-> 포함되지 않은 경우의 값을 사본에 저장
