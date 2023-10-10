@@ -1,0 +1,5 @@
+### Action Tag 문제
+- score_quiz01.jsp 페이지에서 이름, 국어, 영어, 수학의 값을 입력 받는 코드 구현(form 태그 - post)
+- score_quiz01.jsp 페이지에서는 score_quiz01.jsp에서 넘어온 값의 평균을 구하고, 60점 이상인 경우 score_quiz03.jsp 페이지로 이동
+	"xxx님 평균 00점으로 합격" 메세지를 출력하고 60점 미만인 경우 score_quiz04.jsp 페이지로 이동 "xxx님 평균 00점으로 불합격" 메세지를 출력
+- 세션은 사용하지 않음!
