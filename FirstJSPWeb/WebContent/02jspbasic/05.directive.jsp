@@ -21,14 +21,14 @@
 	3. taglib : JSP 페이지에 사용할 태그 라이브러리를 지정할 때 사용
 	
 	지시자 사용 예
-	1] page : 페이지 기본 설정 -> <%@ page 속성="속성값">
+	1] page : 페이지 기본 설정 -> <%@ page 속성="속성값"%>
 	<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-    2] include : include file 설정 -> <%@ include file="파일명">
+    2] include : include file 설정 -> <%@ include file="파일명"%>
     <%@include file="header.jsp"%>
     
-    3] taglib : 외부 라이브러리 태그 설정 -> <%@ taglib uri="uri" prefix="네임스페이스명">
+    3] taglib : 외부 라이브러리 태그 설정 -> <%@ taglib uri="uri" prefix="네임스페이스명"%>
     <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
  --%>
  <%
@@ -46,9 +46,6 @@
  	Date date = new Date();
  	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
  	String now = sdf.format(date);
- 	
- 	
- 	
  %>
 <!DOCTYPE html>
 <html>
