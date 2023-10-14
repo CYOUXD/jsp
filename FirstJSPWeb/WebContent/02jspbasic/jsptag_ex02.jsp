@@ -14,7 +14,7 @@
 	//	}
 	//}
 	
-	//선생님 ver 깃허브에서 가져와서 정리하기
+	//선생님 ver
 	int total = 0;
 
 	public int randomNum(){

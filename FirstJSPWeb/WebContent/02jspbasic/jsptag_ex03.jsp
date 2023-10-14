@@ -11,7 +11,7 @@
 	//	list.add(rn.nextInt(45)+1);
 	//}
 	
-	//선생님 ver 깃허브에서 가져와서 정리하기
+	//선생님 ver
 	// 리스트 객체 생성
 	List<Integer> list = new ArrayList<>();
 	Random ran = new Random();
